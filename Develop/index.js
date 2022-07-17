@@ -42,9 +42,15 @@ const questions = [
        ]
     },
     {
-
+        type: 'input',
+        name: 'GutHub username',
+        message: 'please enter your github username.'
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'please enter your email address.'
     }
-
 ];
 
 // TODO: Create a function to write README file
