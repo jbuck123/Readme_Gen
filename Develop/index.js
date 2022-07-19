@@ -58,18 +58,15 @@ const questions = [
 
 
 // function that writes 
-inquierer.prompt(questions).then((answer) => {
-    console.log(answer);
-    const pageContent = writeToPage(answer)
-    fs.writeFile('readme.md', pageContent, (err) => {
-        err ? console.log(err): console.log("its working")
-      if (answer.name === 'MIT'){
-          answer.name = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
-      }
-    })
+// inquierer.prompt(questions).then((answer) => {
+//     console.log(answer);
+    function writeToPage(answers) {
+        if(answers.license === 'MIT' ){
+            var badge  = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+            var licenseText
+        }
+    }
 
-});
-function writeToPage(answer){
     return`
 # ${answer.title}
 ## Description
@@ -82,6 +79,7 @@ function writeToPage(answer){
     ${answer.contribution_guidelines}
 ### License
     ${answer.license}
+    [![License: ${answer.license}](https://img.shields.io/badge/License-${answer.license}-yellow.svg)](https://opensource.org/licenses/${answer.license})
 ## Contact me
     ${answer.github_username}
     ${answer.email}
@@ -89,8 +87,10 @@ function writeToPage(answer){
 }
 // TODO: Create a function to initialize app
 function init() {
-
-}
+    inquierer.prompt(questions).then((answer) => {
+        writeToPage(answer)
+    }
+)};
 
 // Function call to initialize app
 init();
