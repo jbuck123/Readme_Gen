@@ -12,6 +12,8 @@
     To install this app, you can clone my repo on my Github.
 ## Usage Information
     Users can use this application to easily generate professional Readme's.
+### example of Use
+![Example Gif](https://media.giphy.com/media/ylzsghkzewGwUodGiJ/giphy.gif)
 ## credits
     solo project by James Buchmann
 ### License MIT
