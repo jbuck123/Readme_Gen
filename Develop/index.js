@@ -88,16 +88,16 @@ const questions = [
     ${answer.install_instructions}
 ## Usage Information
     ${answer.usage_information}
-## Contribution Guidelines
+## credits
     ${answer.contribution_guidelines}
 ### License ${answer.license}
 ${badge}
 
-${licenseText}
+    ${licenseText}
 ## Contact me
     ${answer.github_username}
     ${answer.email}
-    `, (err) =>{
+`, (err) =>{
                 if(err) {
                     console.log(err);
                 }else {
