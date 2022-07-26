@@ -75,7 +75,9 @@ const questions = [
             var badge = '';
         }
         console.log(licenseText, badge);
-    fs.writeFile('README.md',`
+            // change the name of the readme
+            
+    fs.writeFile('SampleReadMe',`
 # ${answer.title}
 ## Description
     ${answer.description}
